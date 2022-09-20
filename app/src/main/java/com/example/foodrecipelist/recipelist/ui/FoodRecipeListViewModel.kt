@@ -1,8 +1,5 @@
-package com.example.foodrecipelist.recipelist
+package com.example.foodrecipelist.recipelist.ui
 
-import androidx.compose.runtime.MutableState
-import androidx.compose.runtime.livedata.observeAsState
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

@@ -14,10 +14,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.example.foodrecipelist.recipelist.DetailView
-import com.example.foodrecipelist.recipelist.MyApp1
-import com.example.foodrecipelist.recipelist.SearchScreen
-import com.example.foodrecipelist.recipelist.MyFavorites
+import com.example.foodrecipelist.recipelist.ui.DetailView
+import com.example.foodrecipelist.recipelist.ui.MyApp1
+import com.example.foodrecipelist.recipelist.ui.SearchScreen
+import com.example.foodrecipelist.recipelist.ui.MyFavorites
 import com.example.foodrecipelist.recipelist.model.Routes
 import com.example.foodrecipelist.ui.theme.FoodRecipeListTheme
 import dagger.hilt.android.AndroidEntryPoint

@@ -1,41 +1,31 @@
-package com.example.foodrecipelist.recipelist
+package com.example.foodrecipelist.recipelist.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.*
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.input.ImeAction
-import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.example.foodrecipelist.R
 import com.example.foodrecipelist.recipelist.model.Recipes
 import com.example.foodrecipelist.recipelist.model.Routes
-import com.example.foodrecipelist.ui.theme.FoodRecipeListTheme
 
 
 @Composable
@@ -56,41 +46,9 @@ fun MyAppSearch(
     navigationController: NavHostController,
 
     ) {
-    /*Surface(
-        elevation = 8.dp,
-        modifier = Modifier.fillMaxWidth(),
-        color = MaterialTheme.colors.primary
-    ) {
-
-        Row(modifier = Modifier.fillMaxWidth()) {
-
-            var myText by remember { mutableStateOf("") }
-            TextField(
-                modifier = Modifier
-                    .fillMaxWidth(.9f)
-                    .padding(8.dp)
-                    .background(color = MaterialTheme.colors.surface),
-                value = myText, onValueChange = { myText = it },
-                label = {
-                    Text(text = "Search")
-                },
-                keyboardOptions = KeyboardOptions(
-                    keyboardType = KeyboardType.Text,
-                    imeAction = ImeAction.Done,
-                ),
-                leadingIcon = {
-                    Icon(imageVector = Icons.Filled.Search, contentDescription = "Search")
-                },
-                textStyle = TextStyle(color = MaterialTheme.colors.onSurface)
-
-            )
-        }
-
-    }*/
 
     val titleSearch: String by viewModel.title.observeAsState("")
     val recipes by viewModel.listSearch.observeAsState(mutableListOf())
-    val recipesFavorite by viewModel.recipeFavorites.observeAsState(arrayListOf())
     val isLoading by viewModel.isLoading.observeAsState(false)
 
 

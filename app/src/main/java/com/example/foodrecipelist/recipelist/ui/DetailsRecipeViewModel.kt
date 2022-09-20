@@ -1,4 +1,4 @@
-package com.example.foodrecipelist.recipelist
+package com.example.foodrecipelist.recipelist.ui
 
 
 import android.util.Log
